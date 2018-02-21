@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.support.v7.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     EditText editText;
     Button button;
     Intent intent;
+
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +25,11 @@ public class MainActivity extends AppCompatActivity {
         editText = findViewById(R.id.editText);
         button = findViewById(R.id.button);
 
+        Toolbar myToolbar = findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
     }
+
+
 
     public void press (View v)
     {
